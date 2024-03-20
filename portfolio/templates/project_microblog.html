@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+    <main class="main main--project">
+        <div>
+            <img
+                class="hero"
+                src="{{ url_for('static', filename=project['hero']) }}"
+                alt="A hand holding a pen, about to write something in a project planner."
+            />
+
+            <article class="project">
+                <article class="project__content">
+                    <h2 class="project__heading">{{ project['name'] }}</h2>
+
+                    <p>
+                        Hi, I'm Pratika! I completed my schooling in the PSBB Millennium school. Now I am doing my second year MTech Computer Science Engineering in Sri Krishna College of Engineering and Technology.
+                        I love coding and designing. I'm a full stack developer and a freelancer. You can find me on GitHub as <a href="https://github.com/Pratika17">Pratika</a>.I love to learn new things and also love to explore many stuffs.
+                        I am a hardworker and my objective is to understand things better.
+                    </p>
+                    <p>
+                        Coding is extremely rewarding. As you learn, things start to click and make sense.
+                        You can join the dots of all the things that weren't quite clear before.
+                        I will be consistent in my learning and I will be a great asset to any team/company.
+                        I do have many coding skills which includes Java,HTML,CSS,Python,C,C++,Java Script,MYSQL,SQL,Flask,MONGODB.
+                    </p>
+                </article>
+
+                <section>
+                    <article class="project__meta-group">
+                        <h3 class="project__heading project__heading--meta">Technologies used</h3>
+
+                        <ul class="technology-list">
+                            <li class="technology-list__item">Python</li>
+                            <li class="technology-list__item">HTML</li>
+                            <li class="technology-list__item">CSS</li>
+                        </ul>
+                    </article>
+
+                    <a class="cta" href="{{ project['prod'] }}">
+                        <img class="cta__icon" src="{{ url_for('static', filename='img/micro.svg') }}">
+                        View in production
+                    </a>
+                </section>
+            </article>
+        </div>
+    </main>
+{% endblock %}
